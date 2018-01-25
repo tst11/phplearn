@@ -5,3 +5,6 @@
 ```php
 $affectedRows = $pdo->exec($sql); // returns number of rows
 ```
+
+* SELECT queries are treated a little differently, as they can retrieve a lot of data
+

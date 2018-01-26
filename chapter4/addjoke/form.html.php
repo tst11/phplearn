@@ -13,6 +13,12 @@
   </style>
 </head>
 <body>
-  
+  <form action="?" method="post">
+    <div>
+      <label for="joketext">Type your joke here:</label>
+      <textarea name="joketext" id="joketext" cols="40" rows="3"></textarea>
+    </div>
+    <div><input type="submit" value="Add"></div>
+  </form>
 </body>
 </html>

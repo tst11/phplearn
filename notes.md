@@ -27,3 +27,6 @@ $affectedRows = $pdo->exec($sql); // returns number of rows
   // $_SERVER['PHP_SELF']
   // but makes url /index.php instead of /
 ```
+
+## Chapter 5 Relational DB Design
+

@@ -1,3 +1,15 @@
+## Chapter 2
+
+```sql
+INSERT INTO author SET  
+  id = 1,  
+  name = 'Kevin Yank',  
+  email = 'thatguy@kevinyank.com';
+  
+INSERT INTO author (id, name, email) 
+VALUES (2, 'Joan Smith', 'joan@example.com');
+```
+
 ## Chapter 4
 
 * For DELETE, INSERT, and UPDATE queries (which serve to modify stored data), the exec method returns the number of table rows (entries) that were affected by the query.
@@ -29,4 +41,9 @@ $affectedRows = $pdo->exec($sql); // returns number of rows
 ```
 
 ## Chapter 5 Relational DB Design
+
+* to add new column to the table use 
+```sql
+ALTER TABLE joke ADD COLUMN authorname VARCHAR(255)
+```
 

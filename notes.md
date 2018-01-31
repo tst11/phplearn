@@ -5,9 +5,11 @@ INSERT INTO author SET
   id = 1,  
   name = 'Kevin Yank',  
   email = 'thatguy@kevinyank.com';
-  
+
 INSERT INTO author (id, name, email) 
 VALUES (2, 'Joan Smith', 'joan@example.com');
+
+UPDATE joke SET authorid = 2 WHERE id = 5
 ```
 
 ## Chapter 4
@@ -45,5 +47,23 @@ $affectedRows = $pdo->exec($sql); // returns number of rows
 * to add new column to the table use 
 ```sql
 ALTER TABLE joke ADD COLUMN authorname VARCHAR(255)
+```
+
+* join tables
+```sql
+SELECT joketext
+FROM joke INNER JOIN author
+  ON authorid = author.id
+WHERE name = "Joan Smith"
+```
+
+* Many to Many
+```sql
+SELECT joketext
+FROM joke INNER JOIN jokecategory
+	ON joke.id = jokeid
+INNER JOIN category
+	ON categoryid = category.id
+WHERE name = "Knock-knock"
 ```
 
